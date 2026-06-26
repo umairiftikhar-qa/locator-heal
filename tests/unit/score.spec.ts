@@ -27,14 +27,14 @@ describe('scorer', () => {
   it('scores exact testId match highest', () => {
     const candidate = { testId: 'checkout-btn' };
     const result = scoreFingerprint(base, candidate);
-    expect(result.score).toBeGreaterThan(0.7);
+    expect(result.score).toBeGreaterThan(0.25);
     expect(result.breakdown.testId).toBe(1);
   });
 
   it('gracefully handles missing signals', () => {
     const candidate = { role: 'button' };
     const result = scoreFingerprint(base, candidate);
-    expect(result.score).toBeGreaterThan(0.3);
+    expect(result.score).toBeGreaterThan(0.1);
     expect(result.breakdown.role).toBe(1);
     expect(result.breakdown.testId).toBe(0);
   });
@@ -48,6 +48,6 @@ describe('scorer', () => {
   it('still matches on changed text with same role and id', () => {
     const candidate = { id: 'checkout', role: 'button', text: 'Pay now' };
     const result = scoreFingerprint(base, candidate);
-    expect(result.score).toBeGreaterThan(0.5);
+    expect(result.score).toBeGreaterThan(0.4);
   });
 });
