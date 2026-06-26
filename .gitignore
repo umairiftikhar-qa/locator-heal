@@ -1,0 +1,17 @@
+node_modules/
+dist/
+*.log
+*.tgz
+.DS_Store
+.idea/
+.vscode/
+.playwright/
+coverage/
+*.cache
+
+# test artifacts
+tests/integration/.heal-fingerprints.json
+
+# editor files
+*.swp
+*.swo
