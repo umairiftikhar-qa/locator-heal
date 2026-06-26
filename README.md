@@ -69,3 +69,7 @@ npx playwright test examples/demo.spec.ts
 ## Notes
 
 The fingerprint store is human-readable JSON. Commit it if you want repeatable heals, or add it to `.gitignore` if you prefer recording per branch.
+
+## Readme toggle
+
+If you want to make the project easier to discover on GitHub, enable the repository README preview toggle in the GitHub UI so the quickstart and install instructions show prominently on the landing page.
